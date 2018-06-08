@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CustomViews</string>
+
+    <!-- view One-->
+    <string name="v1_title">Best\nlooks</string>
+    <string name="v1_sub_title">Sub title | May 2018</string>
+    <string name="sample_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed pellentesque nibh. Donec at rutrum diam, eu placerat turpis. Mauris viverra, risus sit amet porttitor venenatis, quam ipsum mollis elit, ut fermentum risus turpis et magna. Curabitur euismod lorem erat. Nam ut pulvinar lacus. Phasellus in blandit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur consequat elit vel tortor dapibus, et efficitur ligula maximus. Suspendisse potenti.</string>
+
+    <!-- view two -->
+    <string name="v2_title">Beauty\nInsider</string>
+    <string name="v2_headline">Featured This Week</string>
+    <string name="v2_text">You can now schedule\nin-store makeovers\nfaster than ever.</string>
+
+    <!-- view three -->
+    <string name="v3_title">Nita Biggs</string>
+    <string name="v3_healine">Meet the subway girl</string>
+
+    <!-- view four -->
+    <string name="v4_headingText">First Best, Korean Artists N Proud</string>
+    <string name="v4_titleText">Who is ArtMine?</string>
+
+    <string-array name="squareImages">
+        <item>https://static1.squarespace.com/static/5a7b6a5080bd5e9ec7cf2205/t/5a7c2b71e2c483d427b4e3b0/1519231978084/12.jpg?format=500w</item>
+        <item>https://static1.squarespace.com/static/599d1aaf6b8f5b243b14699c/5a5502bb419202e14cbbc8ce/5a567db79140b755af37eba2/1515617761737/model-portfolio-portraits-denver-colorado-las-vegas-rebel-imagery-3.jpg?format=500w</item>
+        <item>http://www.fei-xu.com/wp-content/uploads/2015/03/ss-500x500.jpg</item>
+        <item>http://invenda.co.uk/wp-content/uploads/2013/10/INVENDA-1.jpg</item>
+        <item>http://hopojo.com/wp-content/uploads/2017/11/catalogmodel-11.jpg</item>
+        <item>https://e-mozg.com/wp-content/uploads/2017/11/Preview_lovepam-1-500x500.png</item>
+    </string-array>
+
+</resources>

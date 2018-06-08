@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/viewImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_yellow"/>
+
+    <TextView
+        android:id="@+id/headingText"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-regular"
+        android:text="@string/v4_headingText"
+        android:textColor="@color/black"
+        style="@style/viewFourHeadingText"/>
+
+    <RelativeLayout
+        android:id="@+id/viewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/viewFourContainer">
+
+        <TextView
+            android:id="@+id/labelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INTRO"
+            style="@style/viewFourLabelText"/>
+
+        <RelativeLayout
+            android:id="@+id/blackLine"
+            android:layout_below="@id/labelText"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/black">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/textContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blackLine">
+
+            <TextView
+                android:id="@+id/viewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/v4_titleText"
+                style="@style/viewFourTitleText"/>
+
+            <TextView
+                android:id="@+id/viewText"
+                android:layout_below="@id/viewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/v2_text"
+                style="@style/viewFourText"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_below="@id/blackLine"
+            android:layout_alignParentRight="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/zara_larsson"
+            android:background="@drawable/bg_circle"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

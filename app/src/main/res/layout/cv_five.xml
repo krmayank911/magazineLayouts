@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.buggyarts.customviews.customViews.SimpleToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.buggyarts.customviews.customViews.SimpleToolBar>
+
+    <RelativeLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/viewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silence is the Best Weapon."
+            android:textColor="@color/black"
+            android:fontFamily="@font/metropolis_semi_bold"
+            android:textSize="50sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/subLabel"
+            android:layout_below="@id/viewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:text="By Anggit Yunair Pardito, S.Sn Pengejar Rindu Kasih Sayang Fulltime"/>
+
+        <LinearLayout
+            android:id="@+id/detailsContainer"
+            android:layout_below="@id/subLabel"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp">
+            
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                
+                <ImageView
+                    android:id="@+id/viewsIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_remove_red_eye_black_24dp"/>
+                
+                <TextView
+                    android:id="@+id/viewsLabel"
+                    android:layout_toRightOf="@id/viewsIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="6,458 Views"/>
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/likeIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_thumb_up_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/likesLabel"
+                    android:layout_toRightOf="@id/likeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="1,235 Likes"/>
+
+            </RelativeLayout>
+            
+        </LinearLayout>
+        
+        <TextView
+            android:layout_below="@id/detailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/sample_text" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

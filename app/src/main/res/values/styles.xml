@@ -1,0 +1,180 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="viewOneTitle">
+        <item name="android:fontFamily">@font/gravitas_one_regular</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+    <style name="viewOneText">
+        <item name="android:fontFamily">@font/comme_extralight</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="viewOneSubTitle">
+        <item name="android:fontFamily">@font/metropolis_semi_bold</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+
+    <style name="hrvOneTitle">
+        <item name="android:fontFamily">@font/metropolis_semi_bold</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="cell_square">
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:background">@drawable/bg_hrv_cell_square</item>
+    </style>
+
+    <!-- view 2 -->
+    <style name="viewTwoContainer">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">80dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="viewTwoHeadingText">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/metropolis_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="viewTwoTitle">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:fontFamily">@font/abril_fatface_regular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">40dp</item>
+    </style>
+
+    <style name="viewTwoText">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:fontFamily">@font/metropolis_semi_bold</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="viewTwoLargeIcon">
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <!-- view three -->
+
+    <style name="viewThreeContainer">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">80dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="viewThreeHeadingText">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:fontFamily">@font/metropolis_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="viewThreeTitle">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:fontFamily">@font/abril_fatface_regular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">60dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="viewThreeLargeIcon">
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <!-- view four -->
+    <style name="viewFourHeadingText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginTop">80dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+    </style>
+
+    <style name="viewFourContainer">
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="viewFourLabelText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black_label</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:padding">3dp</item>
+    </style>
+
+    <style name="viewFourTitleText">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="viewFourText">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/black_label</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">sans-serif-regular</item>
+    </style>
+
+    <style name="toolBar">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/metropolis_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+</resources>
