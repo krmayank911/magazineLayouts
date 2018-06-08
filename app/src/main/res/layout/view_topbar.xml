@@ -25,4 +25,14 @@
         android:text="Title"
         style="@style/toolBar"/>
 
+    <ImageView
+        android:id="@+id/overflowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_more_vert_black_32dp"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_centerVertical="true"/>
+
 </RelativeLayout>
