@@ -27,6 +27,8 @@ public class HRVOne extends FrameLayout implements SquareCellAdapterHRV.SquareCe
     private RecyclerView.LayoutManager hrvLayoutManager;
     private SquareCellAdapterHRV hrvAdapter;
 
+    private Context mContext;
+
     String[] list = {"https://e-mozg.com/wp-content/uploads/2017/11/Preview_lovepam-1-500x500.png",
             "http://hopojo.com/wp-content/uploads/2017/11/catalogmodel-11.jpg",
             "http://invenda.co.uk/wp-content/uploads/2013/10/INVENDA-1.jpg",
@@ -43,18 +45,21 @@ public class HRVOne extends FrameLayout implements SquareCellAdapterHRV.SquareCe
         hrv = findViewById(R.id.hrv_recyclerView);
         hrvContainer = findViewById(R.id.hrv_container);
 
+        this.mContext = context;
+        // update data here
+    }
+
+    public void setupData(){
         for(String item: list){
             imageList.add(item);
         }
 
-        hrvLayoutManager = new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false);
+        hrvLayoutManager = new LinearLayoutManager(mContext,LinearLayoutManager.HORIZONTAL,false);
         hrv.setLayoutManager(hrvLayoutManager);
 
-        hrvAdapter = new SquareCellAdapterHRV(context,imageList);
+        hrvAdapter = new SquareCellAdapterHRV(mContext, imageList);
         hrvAdapter.setUpCellCallbacks(this);
         hrv.setAdapter(hrvAdapter);
-
-        // update data here
     }
 
     public TextView getHrvTitle() {

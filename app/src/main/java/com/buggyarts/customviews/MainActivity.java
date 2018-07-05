@@ -1,9 +1,14 @@
 package com.buggyarts.customviews;
 
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.buggyarts.customviews.adapters.pagerAdapters.CardPagerAdapter;
+import com.buggyarts.customviews.customClasses.ShadowTransformer;
+import com.buggyarts.customviews.customViews.CustomHLView;
 import com.buggyarts.customviews.customViews.HRVOne;
+import com.buggyarts.customviews.model.CardItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     "https://static1.squarespace.com/static/599d1aaf6b8f5b243b14699c/5a5502bb419202e14cbbc8ce/5a567db79140b755af37eba2/1515617761737/model-portfolio-portraits-denver-colorado-las-vegas-rebel-imagery-3.jpg?format=500w",
     "https://static1.squarespace.com/static/5a7b6a5080bd5e9ec7cf2205/t/5a7c2b71e2c483d427b4e3b0/1519231978084/12.jpg?format=500w"};
 
+    ArrayList<CardItem> cardItems = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,12 +34,23 @@ public class MainActivity extends AppCompatActivity {
         hrvOne = findViewById(R.id.hrvOne);
         hrvOne.setHrvTitle("This Week");
         hrvOne.getHrvContainer().setBackgroundColor(getResources().getColor(R.color.v1_background));
-//        imageList = new ArrayList<>();
+
+        imageList = new ArrayList<>();
 //        imageList = (ArrayList<String>) Arrays.asList(getResources().getStringArray(R.array.squareImages));
-//        for(String item: list){
-//            imageList.add(item);
-//        }
-//        hrvOne.setImageList(imageList);
-//        hrvOne.updateView();
+        for(String item: list){
+            imageList.add(item);
+        }
+        hrvOne.setImageList(imageList);
+        hrvOne.setupData();
+        hrvOne.updateView();
+
+        CustomHLView customHLView = findViewById(R.id.custom_hl_view);
+
+        for(String imageLink: list){
+            cardItems.add(new CardItem(imageLink,"label"));
+        }
+
+        customHLView.setupData(cardItems);
+
     }
 }

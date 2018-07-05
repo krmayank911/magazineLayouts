@@ -17,6 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.buggyarts.customviews.customClasses.MyGlideModule"
+            android:value="MyGlideModule" />
+
     </application>
 
 </manifest>
