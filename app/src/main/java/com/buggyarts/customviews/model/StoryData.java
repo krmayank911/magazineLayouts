@@ -37,6 +37,18 @@ public class StoryData {
     // story fullStoryUrl
     String fullStoryUrl;
 
+    // story views
+    Integer views;
+
+    // story likes
+    Integer likes;
+
+    // story hasVideo
+    Boolean hasVideo;
+
+    // story videoUrl
+    String  videoUrl;
+
     /**
      * getter and setter methods
      */
@@ -126,5 +138,37 @@ public class StoryData {
 
     public void setFullStoryUrl(String fullStoryUrl) {
         this.fullStoryUrl = fullStoryUrl;
+    }
+
+    public Integer getViews() {
+        return views;
+    }
+
+    public void setViews(Integer views) {
+        this.views = views;
+    }
+
+    public Integer getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Integer likes) {
+        this.likes = likes;
+    }
+
+    public Boolean getHasVideo() {
+        return hasVideo;
+    }
+
+    public void setHasVideo(Boolean hasVideo) {
+        this.hasVideo = hasVideo;
+    }
+
+    public String getVideoUrl() {
+        return videoUrl;
+    }
+
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
     }
 }

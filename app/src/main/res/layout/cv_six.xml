@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/coverImage"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@android:color/holo_orange_dark" />
+
+        <RelativeLayout
+            android:id="@+id/headingDetails"
+            android:layout_below="@id/coverImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/sourceDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/sourceImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_circle"/>
+
+                <TextView
+                    android:id="@+id/sourceName"
+                    android:layout_toRightOf="@id/sourceImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Julia Shmit"
+                    style="@style/viewOneSubTitle"
+                    android:textColor="@color/black_label"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/timeStamp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:text="2 days ago"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/storyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Holidays to Alpine"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:id="@+id/storyDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:textSize="16dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at purus diam. Fusce nec mi vel magna tempor lacinia. Nunc in massa auctor, rutrum neque vel, lobortis dolor. Nulla dui nibh, pretium vitae lectus sed, laoreet volutpat elit. Pellentesque enim ex, laoreet non semper vitae, semper sit amet mi. Aliquam ac sem in sem luctus elementum a eget odio. Curabitur fermentum venenatis rhoncus. Donec tristique justo at semper luctus. Morbi vitae faucibus felis. Vivamus tincidunt magna nisi, quis feugiat eros posuere non. Nam non odio et enim tincidunt ullamcorper interdum at nibh."/>
+
+    </LinearLayout>
+
+</ScrollView>
