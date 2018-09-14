@@ -1,6 +1,11 @@
 package com.buggyarts.customviews.adapters.pagerAdapters;
 
 import android.content.Context;
+import android.database.DataSetObserver;
+import android.os.Build;
+import android.os.Parcelable;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.widget.CardView;
 import android.util.Xml;
@@ -8,22 +13,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
-
+import android.widget.RelativeLayout;
 import com.buggyarts.customviews.R;
 import com.buggyarts.customviews.customClasses.CardAdapter;
 import com.buggyarts.customviews.customClasses.GlideApp;
-import com.buggyarts.customviews.customClasses.MyGlideModule;
+import com.buggyarts.customviews.customViews.SkewedLayout;
 import com.buggyarts.customviews.model.CardItem;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.annotation.GlideModule;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
+public class CardPagerAdapter extends PagerAdapter implements CardAdapter{
 
-    private List<CardView> mViews;
+    private List<RelativeLayout> mViews = new ArrayList<>();
     private List<CardItem> mData;
     private float mBaseElevation;
     private Context mContext;
@@ -44,14 +46,24 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
     }
 
     @Override
-    public CardView getCardViewAt(int position) {
-        return mViews.get(position);
+    public int getCardCount() {
+        return mData.size();
     }
 
     @Override
-    public int getCount() {
-        return mData.size();
+    public RelativeLayout getCardViewAt(int position) {
+        if(mViews.size() != 0) {
+
+            int virtualPosition = position % this.getRealCount();
+            return mViews.get(virtualPosition);
+
+        }else return null;
     }
+
+//    @Override
+//    public int getCount() {
+//        return mData.size();
+//    }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
@@ -59,27 +71,34 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(ViewGroup container, int position ) {
+
+        int virtualPosition = position % this.getRealCount();
+
         View view = LayoutInflater.from(container.getContext())
                 .inflate(R.layout.custom_hl_cell, container, false);
         container.addView(view);
 //        bind(mData.get(position), view);
-        setViews(mData.get(position), view);
-        CardView cardView = (CardView) view.findViewById(R.id.cardView);
+        setViews(mData.get(virtualPosition), view);
+        RelativeLayout cardView = (RelativeLayout) view.findViewById(R.id.cardView);
 
-        if (mBaseElevation == 0) {
-            mBaseElevation = cardView.getCardElevation();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+            if (mBaseElevation == 0) {
+                mBaseElevation = cardView.getElevation();
+            }
+
+            cardView.setElevation(mBaseElevation * MAX_ELEVATION_FACTOR);
+            mViews.set(virtualPosition, cardView);
         }
-
-        cardView.setMaxCardElevation(mBaseElevation * MAX_ELEVATION_FACTOR);
-        mViews.set(position, cardView);
         return view;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((View) object);
-        mViews.set(position, null);
+        int virtualPosition = position % this.getRealCount();
+        mViews.set(virtualPosition, null);
     }
 
     private void bind(CardItem item, View view) {
@@ -90,12 +109,26 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
     }
 
     private void setViews(CardItem item, View view){
-        ImageView imageView = view.findViewById(R.id.cell_iv);
-        TextView labelTextView = view.findViewById(R.id.labelText);
 
-        labelTextView.setText(item.getLableText());
+        SkewedLayout skewedLayout = view.findViewById(R.id.skewLayout);
+        skewedLayout.labelTextView.setText(item.getLableText());
+
+//        ImageView imageView = view.findViewById(R.id.cell_iv);
+//        TextView labelTextView = view.findViewById(R.id.labelText);
+
+//        labelTextView.setText(item.getLableText());
 //        Glide.with(mContext).load(item.getImageLink()).into(imageView);
-        GlideApp.with(mContext).load(item.getImageLink()).into(imageView);
+        GlideApp.with(mContext).load(item.getImageLink()).into(skewedLayout.imageView);
     }
+
+    @Override
+    public int getCount() {
+        return getRealCount() == 0 ? 0 :  4000;
+    }
+
+    public int getRealCount() {
+        return getCardCount();
+    }
+
 
 }

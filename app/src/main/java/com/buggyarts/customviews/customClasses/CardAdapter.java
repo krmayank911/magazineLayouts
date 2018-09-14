@@ -2,6 +2,7 @@ package com.buggyarts.customviews.customClasses;
 
 
 import android.support.v7.widget.CardView;
+import android.widget.RelativeLayout;
 
 public interface CardAdapter {
 
@@ -9,7 +10,7 @@ public interface CardAdapter {
 
     float getBaseElevation();
 
-    CardView getCardViewAt(int position);
+    RelativeLayout getCardViewAt(int position);
 
-    int getCount();
+    int getCardCount();
 }

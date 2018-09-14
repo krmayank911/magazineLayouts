@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--viewBox = "0 0 283 283" -->
+<svg viewBox = "0 0 12 10" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <rect width="12" height="10"
+            fill="#000000"
+            transform="skewX(-0.5)"
+            x="0"
+            y="0"/>
+    </g>
+</svg>
+
+
+    <!--transform="rotate(-45 141.5 141.5)"-->

@@ -9,8 +9,11 @@ import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.antonyt.infiniteviewpager.InfinitePagerAdapter;
+import com.antonyt.infiniteviewpager.InfiniteViewPager;
 import com.buggyarts.customviews.R;
 import com.buggyarts.customviews.adapters.pagerAdapters.CardPagerAdapter;
+import com.buggyarts.customviews.adapters.pagerAdapters.InfinitePager;
 import com.buggyarts.customviews.customClasses.ShadowTransformer;
 import com.buggyarts.customviews.model.CardItem;
 
@@ -18,7 +21,7 @@ import java.util.ArrayList;
 
 public class CustomHLView extends FrameLayout implements ViewPager.OnPageChangeListener{
 
-    private ViewPager mViewPager;
+    private InfiniteViewPager mViewPager;
     private CardPagerAdapter mCardAdapter;
     private ShadowTransformer mCardShadowTransformer;
     private TextView itemCount;
@@ -44,6 +47,7 @@ public class CustomHLView extends FrameLayout implements ViewPager.OnPageChangeL
         cards = itemList;
 
         mCardAdapter = new CardPagerAdapter(mContext);
+//        InfinitePager infinitePager = new InfinitePager(mContext,mCardAdapter);
 
         for(CardItem item : cards){
             mCardAdapter.addCardItem(item);
@@ -53,7 +57,8 @@ public class CustomHLView extends FrameLayout implements ViewPager.OnPageChangeL
 
         mViewPager.setAdapter(mCardAdapter);
         mViewPager.setPageTransformer(false, mCardShadowTransformer);
-        mViewPager.setOffscreenPageLimit(3);
+        mViewPager.setOffscreenPageLimit(4);
+        mViewPager.setCurrentItem(200);
 
         mViewPager.addOnPageChangeListener(this);
 
