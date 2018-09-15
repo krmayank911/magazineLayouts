@@ -30,12 +30,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.buggyarts.customviews.R;
+import com.buggyarts.customviews.customClasses.RectangleImageView;
 import com.github.siyamed.shapeimageview.ShapeImageView;
 
 public class SkewedLayout extends FrameLayout{
 
     public int backgroundColor;
-    public ShapeImageView imageView;
+    public RectangleImageView imageView;
     public TextView labelTextView;
 
     //paint for drawing custom view
@@ -122,11 +123,11 @@ public class SkewedLayout extends FrameLayout{
         requestLayout();
     }
 
-    public ShapeImageView getImageView() {
+    public RectangleImageView getImageView() {
         return imageView;
     }
 
-    public void setImageView(ShapeImageView imageView) {
+    public void setImageView(RectangleImageView imageView) {
         this.imageView = imageView;
     }
 

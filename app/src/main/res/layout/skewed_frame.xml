@@ -3,7 +3,8 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    android:clipToPadding="false"
+    android:clipChildren="true">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -12,13 +13,13 @@
         android:clipToPadding="false"
         android:clipChildren="false">
 
-        <com.github.siyamed.shapeimageview.ShapeImageView
+        <com.buggyarts.customviews.customClasses.RectangleImageView
             android:id="@+id/cell_iv"
-            android:layout_width="260dp"
+            android:layout_width="180dp"
             android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/nika_biggs_portfolio_23"
-            app:siShape="@raw/skew_shape"/>
+            android:scaleType="centerInside"
+            app:strokeColor="@color/colorAccent"
+            android:src="@drawable/nika_biggs_portfolio_23"/>
 
         <TextView
             android:id="@+id/labelText"

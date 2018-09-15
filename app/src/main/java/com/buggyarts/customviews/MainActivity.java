@@ -99,8 +99,8 @@ public class MainActivity extends AppCompatActivity {
         hrv.setItemTransitionTimeMillis(300); //determines how much time it takes to change the item on fling, settle or smoothScroll
 
         hrv.setItemTransformer(new PageTransfromer.Builder()
-                .setMaxScale(1.65f)
-                .setMinScale(1.45f)
+                .setMaxScale(1.45f)
+                .setMinScale(1.25f)
                 .setPivotX(Pivot.X.CENTER) // CENTER is a default one
                 .setPivotY(Pivot.Y.CENTER) // CENTER is a default one
                 .build());

@@ -36,7 +36,15 @@ public class PageTransfromer implements DiscreteScrollItemTransformer {
 //        float width = item.findViewById(R.id.skewLayout).getMeasuredWidth();
 //        float translation = width / (scale);
 //
-//        item.findViewById(R.id.cell_iv).setTranslationX(-80);
+//        item.findViewById(R.id.cell_iv).setTranslationX(- item.getWidth()/2 * position);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if (position!= 0) {
+                item.setElevation(2);
+            } else {
+                item.setElevation(4);
+            }
+        }
 
     }
 

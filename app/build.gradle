@@ -36,7 +36,7 @@ dependencies {
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
     implementation 'com.github.antonyt:InfiniteViewPager:v1.0.0'
     implementation 'com.yarolegovich:discrete-scrollview:1.4.9'
-
+    compile 'com.github.abdularis:CircularImageView:v1.2'
 
 
 }
